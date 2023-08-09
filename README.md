@@ -1,5 +1,7 @@
 # CdsScoreboardFrontend
 
+Attendance and Score Management System - CDS : Allows you to track attendance at events and meetings, assign scores for participation and attendance, and maintain score control (adm). It also allows you to register, see the activities and events in which they participated and also see the points they have (user).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
 ## Development server
