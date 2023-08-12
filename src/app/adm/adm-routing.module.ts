@@ -27,6 +27,16 @@ const routes: Routes = [
     loadChildren: () => import('./assists/assists.module').then(m => m.AssistsModule),
     data: { name: 'assists' },
   },
+  {
+    path: 'participation-points',
+    loadChildren: () => import('./points-participation/points-participation.module').then(m => m.PointsParticipationModule),
+    data: { name: 'participation-points' },
+  },
+  {
+    path: '',
+    redirectTo: 'profile',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
