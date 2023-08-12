@@ -1,12 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { EventoDescriptionComponent } from './pages/eventos/evento-description/evento-description.component';
-import { EventosProximosComponent } from './pages/eventos/eventos-proximos/eventos-proximos.component';
-import { EventosAnterioresComponent } from './pages/eventos/eventos-anteriores/eventos-anteriores.component';
 import { DescriptionPageComponent } from './pages/description-page/description-page.component';
-import { EditPerfilComponent } from './pages/perfil/edit-perfil/edit-perfil.component';
-import { VerPerfilComponent } from './pages/perfil/ver-perfil/ver-perfil.component';
 
 const routes: Routes = [
   {
@@ -19,33 +14,18 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-    path: 'event/: id',
-    component: EventoDescriptionComponent
-  },
-  {
     path: 'events',
-    component: EventosProximosComponent
+    loadChildren: () => import('./../shared/events/user-events/user-events.module').then(m => m.UserEventsModule),
+    data: { name: 'events' }
   },
   {
-    path: 'past-events',
-    component: EventosAnterioresComponent
+    path: 'profile',
+    loadChildren: () => import('./../shared/profile/user-profile/user-profile.module').then(m => m.UserProfileModule),
+    data: { name: 'profile' }
   },
   {
     path: 'about-us',
     component: DescriptionPageComponent
-  },
-  {
-    path: 'perfil',
-    children: [
-      {
-        path: '',
-        component: VerPerfilComponent
-      },
-      {
-        path: 'edit/:id',
-        component: EditPerfilComponent
-      }
-    ]
   },
   {
     path: '',
