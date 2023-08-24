@@ -7,14 +7,21 @@ import { UserModule } from './user/user.module';
 import { AdmModule } from './adm/adm.module';
 import { UserRoutingModule } from './user/user-routing.module';
 import { AdmRoutingModule } from './adm/adm-routing.module';
+import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
