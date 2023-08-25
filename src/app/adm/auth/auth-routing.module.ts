@@ -8,9 +8,8 @@ import { LoginAdmComponent } from './pages/login-adm/login-adm.component';
 const routes: Routes = [
   {
     path: '',
-    component: LayoutAdmComponent,
     children: [
-      { path: 'login', component: LoginAdmComponent }
+      { path: 'login', component: LoginAdmComponent },
     ]
   }
 ];

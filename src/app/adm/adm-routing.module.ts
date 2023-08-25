@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LayoutAdmComponent } from './auth/pages/layout-adm/layout-adm.component';
+import { LayoutGeneralComponent } from './layout-general/layout-general.component';
 
 const routes: Routes = [
   {
     path: 'auth',
+    component: LayoutAdmComponent,
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
     data: { name: 'auth' }
   },
   {
     path: 'config',
+
     loadChildren: () => import('./config/config.module').then(m => m.ConfigModule),
     data: { name: 'config' },
   },
@@ -24,6 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'assists',
+    component: LayoutGeneralComponent,
     loadChildren: () => import('./assists/assists.module').then(m => m.AssistsModule),
     data: { name: 'assists' },
   },
