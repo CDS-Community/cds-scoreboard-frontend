@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AssistsRoutingModule } from './assists-routing.module';
 import { ListAssistsComponent } from './pages/list-assists/list-assists.component';
 import { CheckAssistComponent } from './pages/check-assist/check-assist.component';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { CheckAssistComponent } from './pages/check-assist/check-assist.componen
   ],
   imports: [
     CommonModule,
-    AssistsRoutingModule
+    AssistsRoutingModule,
+    MaterialModule
   ]
 })
 export class AssistsModule { }

@@ -1,2 +1,51 @@
-<p>layout-general works!</p>
-<router-outlet></router-outlet>
+<div >
+  <mat-sidenav-container fullscreen style="background-color: #e9ecef">
+
+    <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }" style="background-color: #363740;">
+      <mat-toolbar>
+        <span>Menú</span>
+        <span class="spacer"></span>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+      </mat-toolbar>
+
+      <mat-nav-list>
+        <mat-list-item
+          *ngFor="let item of sidebarItems"
+          [routerLink]="item.url"
+          (click)="sidenav.toggle()"
+        >
+          <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+
+          {{ item.label }}
+
+        </mat-list-item>
+      </mat-nav-list>
+
+
+    </mat-sidenav>
+
+
+    <mat-toolbar style="background-color: white;">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h2>Bienvenido "Nombre de Usuario" </h2>
+      <span class="spacer"></span>
+
+      <button mat-button>
+        Logout
+      </button>
+
+    </mat-toolbar>
+
+    <div class="container p-2">
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </mat-sidenav-container>
+</div>
