@@ -10,16 +10,17 @@ import { AdmRoutingModule } from './adm/adm-routing.module';
 import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
 
-
-
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     SharedModule,
