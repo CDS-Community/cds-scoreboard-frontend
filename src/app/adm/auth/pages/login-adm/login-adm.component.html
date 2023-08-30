@@ -1,20 +1,29 @@
 
-<div class="flex flex-column">
+<form class="flex flex-column"
+  [formGroup]="myForm"
+  (ngSubmit)="login()"
+  >
 
   <span  class="text-7xl mb-7" style="color: white;">Login</span>
 
   <mat-form-field>
-    <mat-label>Usuario</mat-label>
-    <input type="text" matInput placeholder="Nombre de usuario">
+    <mat-label>Correo Electrónico</mat-label>
+    <input type="text" matInput
+    placeholder="Tu Correo"
+    formControlName = "email"
+    >
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Contraseña</mat-label>
-    <input type="password" matInput placeholder="Contraseña">
+    <input type="password" matInput
+    placeholder="Contraseña"
+    formControlName = "password"
+    >
   </mat-form-field>
 
-  <button mat-button mat-flat-button color="primary">
+  <button mat-button mat-flat-button color="primary" [disabled]="myForm.invalid">
     Ingresar
   </button>
 
-</div>
+</form>

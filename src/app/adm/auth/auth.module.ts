@@ -5,6 +5,7 @@ import { LayoutAdmComponent } from './pages/layout-adm/layout-adm.component';
 import { AdmAuthRoutingModule } from './auth-routing.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { LayoutGeneralComponent } from '../layout-general/layout-general.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { LayoutGeneralComponent } from '../layout-general/layout-general.compone
   imports: [
     CommonModule,
     AdmAuthRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }
