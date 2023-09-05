@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DescriptionPageComponent } from './pages/description-page/description-page.component';
+import { LayoutGeneralComponent } from './layout-general/layout-general.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'events',
+    component: LayoutGeneralComponent,
     loadChildren: () => import('./../shared/events/user-events/user-events.module').then(m => m.UserEventsModule),
     data: { name: 'events' }
   },
