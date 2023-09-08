@@ -6,7 +6,7 @@ import { AdmAuthRoutingModule } from './auth-routing.module';
 import { MaterialModule } from 'src/app/material/material.module';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { LayoutGeneralComponent } from '../adm/layout-general/layout-general.component';
+import { LayoutGeneralComponent } from '../adm/layouts/layout-general/layout-general.component';
 
 
 
