@@ -34,7 +34,7 @@ const routes: Routes = [
     data: { name: 'assists' },
   },
   {
-    path: 'participation-points',
+    path: 'points-participation',
     loadChildren: () => import('./points-participation/points-participation.module').then(m => m.PointsParticipationModule),
     data: { name: 'participation-points' },
   },
