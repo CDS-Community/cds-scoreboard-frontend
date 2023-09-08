@@ -14,28 +14,28 @@ const routes: Routes = [
   {
     path: 'config',
 
-    loadChildren: () => import('./config/config.module').then(m => m.ConfigModule),
+    loadChildren: () => import('./modules/config/config.module').then(m => m.ConfigModule),
     data: { name: 'config' },
   },
   {
     path: 'events',
-    loadChildren: () => import('./../shared/events/adm-events/adm-events.module').then(m => m.AdmEventsModule),
+    loadChildren: () => import('./modules/events/events.module').then(m => m.EventsModule),
     data: { name: 'events' },
   },
   {
     path: 'profile',
-    loadChildren: () => import('./../shared/profile/adm-profile/adm-profile.module').then(m => m.AdmProfileModule),
+    loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule),
     data: { name: 'perfil' },
   },
   {
     path: 'assists',
     component: LayoutGeneralComponent,
-    loadChildren: () => import('./assists/assists.module').then(m => m.AssistsModule),
+    loadChildren: () => import('./modules/assists/assists.module').then(m => m.AssistsModule),
     data: { name: 'assists' },
   },
   {
     path: 'points-participation',
-    loadChildren: () => import('./points-participation/points-participation.module').then(m => m.PointsParticipationModule),
+    loadChildren: () => import('./modules/points-participation/points-participation.module').then(m => m.PointsParticipationModule),
     data: { name: 'participation-points' },
   },
   {
