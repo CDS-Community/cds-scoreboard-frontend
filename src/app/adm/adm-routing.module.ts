@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutAdmComponent } from './auth/pages/layout-adm/layout-adm.component';
+
 import { LayoutGeneralComponent } from './layout-general/layout-general.component';
+import { LayoutAdmComponent } from '../auth/layouts/layout-adm/layout-adm.component';
 
 const routes: Routes = [
-  {
-    path: 'auth',
-    component: LayoutAdmComponent,
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
-    data: { name: 'auth' }
-  },
+  // {
+  //   path: 'auth',
+  //   component: LayoutAdmComponent,
+  //   loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+  //   data: { name: 'auth' }
+  // },
   {
     path: 'config',
 

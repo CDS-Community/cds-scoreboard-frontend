@@ -15,6 +15,12 @@ const routes: Routes = [
   },
 
   {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+    data: { name: 'auth' }
+  },
+
+  {
     path: '404',
     component: Error404PageComponent,
   },

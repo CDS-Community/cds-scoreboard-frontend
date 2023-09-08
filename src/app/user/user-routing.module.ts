@@ -5,11 +5,11 @@ import { DescriptionPageComponent } from './pages/description-page/description-p
 import { LayoutGeneralComponent } from './layout-general/layout-general.component';
 
 const routes: Routes = [
-  {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
-    data: { name: 'auth' }
-  },
+  // {
+  //   path: 'auth',
+  //   loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+  //   data: { name: 'auth' }
+  // },
   {
     path: 'home',
     component: HomePageComponent
