@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: 'events',
     component: LayoutGeneralComponent,
-    loadChildren: () => import('./../shared/events/user-events/user-events.module').then(m => m.UserEventsModule),
+    loadChildren: () => import('./modules/events/events.module').then(m => m.EventsModule),
     data: { name: 'events' }
   },
   {
