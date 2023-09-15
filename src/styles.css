@@ -18,3 +18,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin-right: 30px; /* Ajusta el valor según el tamaño del margen que desees */
   background-color: blue; /* Cambia "blue" al color de fondo que prefieras */
 }
+
+
+.image {
+  width: 100%;
+  height:50%;
+}
+

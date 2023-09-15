@@ -1,3 +1,80 @@
 
 
-<p>events-list-page user works!</p>
+
+<img mat-card-image class="image" src="https://fotografias.lasexta.com/clipping/cmsimages01/2022/08/09/3FFA8546-05CE-4608-9B69-6602D02A4C58/cachorro-pomsky_97.jpg?crop=1183,665,x0,y103&width=1600&height=900&optimize=high&format=webply" alt="Photo of a Shiba Inu">
+
+<mat-card-content>
+  <h2 class="text-center mt-3 font-bold text-4xl mb-3">Nombre del Evento</h2>
+  <mat-grid-list cols="2" rowHeight="2:1" >
+
+      <mat-grid-tile>
+
+        <form class="flex flex-column">
+          <mat-form-field>
+
+            <mat-label>Descripcion</mat-label>
+            <input type="text" matInput
+            placeholder="Descripcion del Enveto"
+            formControlName = "description"
+            >
+          </mat-form-field>
+
+
+
+            <mat-form-field>
+              <mat-label>Fecha</mat-label>
+              <input type="date" matInput
+              placeholder="Fecha del Evento"
+              formControlName = "date"
+              >
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Lugar</mat-label>
+              <input type="text" matInput
+              placeholder="Ubicación del Evento"
+              formControlName = "place"
+              >
+            </mat-form-field>
+
+
+            <button mat-button mat-flat-button color="primary" >
+              Ingresar
+            </button>
+        </form>
+
+
+
+
+      </mat-grid-tile>
+
+
+
+
+
+
+    <mat-grid-tile class="mt-0">
+      <mat-card-title> Cronograma: </mat-card-title>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+
+
+
+</mat-card-content>
+
+
+
+<mat-card-content>
+  <h2 class="text-center mt-3 font-bold text-4xl mb-3">Ubicacion</h2>
+
+
+    <div class="card">
+      <div class="card-container green-container overflow-hidden">
+          <div class="bg-contain bg-center bg-no-repeat bg-green-500 border-round h-20rem w-full" style="background-image: url('./assets/images/product-placeholder.svg')"></div>
+
+        </div>
+   </div>
+
+</mat-card-content>
