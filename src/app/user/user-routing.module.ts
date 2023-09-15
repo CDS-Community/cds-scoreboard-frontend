@@ -22,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    loadChildren: () => import('./../shared/profile/user-profile/user-profile.module').then(m => m.UserProfileModule),
+    component: LayoutGeneralComponent,
+    loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule),
     data: { name: 'profile' }
   },
   {
