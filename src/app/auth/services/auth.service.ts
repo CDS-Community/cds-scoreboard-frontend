@@ -1,8 +1,8 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environments } from 'src/environments/environments';
-import { AuthStatus, User } from '../interfaces';
-import { Observable, of } from 'rxjs';
+import { AuthStatus, LoginResponse, User } from '../interfaces';
+import { Observable, map, of, tap } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
@@ -23,10 +23,24 @@ export class AuthService {
 
   login(email:string, password: string): Observable<boolean>{
 
-  const utl = `${this.baseUrl}/api/auth/login`
+  const url = `${this.baseUrl}/api/auth/login`
   const body = {}
 
-  return of(true);
+  return this.http.post<LoginResponse>(url,body)
+    .pipe(
+      tap(({user, token}) => {
+          this._currentUser.set(user);
+          this._authStatus.set(AuthStatus.authenticated);
+          localStorage.setItem('toke', token),
+
+          console.log({user, token});
+      }),
+
+      map(() => true)
+
+    );
+
+
   }
 
 

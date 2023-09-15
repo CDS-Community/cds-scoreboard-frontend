@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EventsListPageComponent } from './pages/events-list-page/events-list-page.component';
 import { EventShowPageComponent } from './pages/event-show-page/event-show-page.component';
+import { LayoutGeneralComponent } from '../../layouts/layout-general/layout-general.component';
 
 const routes: Routes = [
   {

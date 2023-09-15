@@ -1,3 +1,3 @@
-export * from './auth-status.enum.js';
+export * from './auth-status.enum'
 export  * from './login-response-interface.ts';
 export * from './user.interface';
